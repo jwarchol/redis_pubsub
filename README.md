@@ -18,3 +18,17 @@ The only real trick here was doing some em-synchrony style fiber yielding and re
 in order to have the request wait until there is a message on the channel. This API
 is currently for a long-polling kind of interface. It could be extended for an HTTP 
 stream. 
+
+Terminal #1
+```
+ruby redis_pubsub.rb -sv -e prod
+```
+
+Terminal #2
+```
+ruby input.rb
+```
+
+Then hit http://localhost:9000/index.html
+
+
