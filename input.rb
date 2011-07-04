@@ -23,5 +23,5 @@ module PingToRedis
 end
 EM.run do
 	redis = EM::Hiredis.connect
-	EM.popen("ping -i 5 209.87.79.232", PingToRedis, redis)	
+	EM.popen("ping -i 2 209.87.79.232", PingToRedis, redis)	
 end
