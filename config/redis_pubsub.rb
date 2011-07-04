@@ -7,5 +7,5 @@ config['redis'] ||= EM::Hiredis.connect
 
 config['redis'].subscribe('ping')
 config['redis'].on(:message)  do |ch, msg|
-	config['channel'].push(msg)
+  config['channel'].push(msg)
 end
